@@ -1,3 +1,15 @@
+install:
+  - npm install
+
+before_script:
+  - npm run lint
+
+script:
+  - npm run build
+
+before_deploy:
+  - npm run test
+
 deploy:
   provider: npm
   email: "eirik@archivedworks.com"
