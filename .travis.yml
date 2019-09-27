@@ -1,0 +1,6 @@
+deploy:
+  provider: npm
+  email: "eirik@archivedworks.com"
+  api_key: $NPM-TOKEN
+  on:
+    branch: master
