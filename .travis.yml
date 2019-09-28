@@ -13,6 +13,6 @@ script:
 deploy:
   provider: npm
   email: "eirik@archivedworks.com"
-  api_key: $NPM-TOKEN
+  api_key: $NPM_TOKEN
   on:
     branch: master
