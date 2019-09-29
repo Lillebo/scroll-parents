@@ -1,5 +1,7 @@
 # scroll-parents
 
+<img src="https://img.shields.io/npm/v/scroll-parents" /> <img src="https://img.shields.io/travis/Lillebo/scroll-parents" />
+
 Simple function that returns an array with all the scrolling parent nodes of a given element. Useful if an element needs to listen to the scroll event of all it's parent nodes.
 
 ## Install
