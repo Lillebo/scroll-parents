@@ -9,6 +9,11 @@
     "lint": "tslint -c tslint.json 'src/scroll-parents.ts'",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lillebo/scroll-parents"
+  },
+  "keywords": ["dom", "scroll", "scrolling", "parents", "util", "utility"],
   "author": "Eirik Lillebo",
   "license": "ISC",
   "devDependencies": {
