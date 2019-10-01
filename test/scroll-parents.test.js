@@ -20,7 +20,7 @@ test("Node inside parent with 'overflow: scroll' returns [window, parentNode]", 
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside parent with 'overflow: auto' returns [window, parentNode]", () => {
@@ -32,7 +32,7 @@ test("Node inside parent with 'overflow: auto' returns [window, parentNode]", ()
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside parent with 'overflow-x: scroll' returns [window, parentNode]", () => {
@@ -44,7 +44,7 @@ test("Node inside parent with 'overflow-x: scroll' returns [window, parentNode]"
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside parent with 'overflow-x: auto' returns [window, parentNode]", () => {
@@ -56,7 +56,7 @@ test("Node inside parent with 'overflow-x: auto' returns [window, parentNode]", 
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside parent with 'overflow-y: scroll' returns [window, parentNode]", () => {
@@ -68,7 +68,7 @@ test("Node inside parent with 'overflow-y: scroll' returns [window, parentNode]"
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside parent with 'overflow-y: auto' returns [window, parentNode]", () => {
@@ -80,7 +80,7 @@ test("Node inside parent with 'overflow-y: auto' returns [window, parentNode]", 
     parent.appendChild(child);
     document.body.appendChild(parent);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parent]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parent, window]));
 });
 
 test("Node inside two parents with 'overflow: scroll' returns [window, parentNodeA, parentNodeB]", () => {
@@ -96,5 +96,5 @@ test("Node inside two parents with 'overflow: scroll' returns [window, parentNod
     parentA.appendChild(parentB);
     document.body.appendChild(parentA);
 
-    expect(scrollParents(child)).toEqual(expect.arrayContaining([window, parentA, parentB]));
+    expect(scrollParents(child)).toEqual(expect.arrayContaining([parentA, parentB, window]));
 });
