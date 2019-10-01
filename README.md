@@ -4,8 +4,6 @@
 
 Simple function that returns an array with all the scrolling parent nodes of a given element. Useful if an element needs to listen to the scroll event of all it's parent nodes.
 
-The array is ordered from closest scrolling parent (left) to most distant scrolling parent (right), always ending with the Window object.
-
 ## Install
 
 ```shell
@@ -33,6 +31,8 @@ const myNode = document.getElementById('my-id');
 
 scrollParents(myNode); // Output: [scrollingParent, Window]
 ````
+
+The array is ordered from closest scrolling parent (left) to most distant scrolling parent (right), always ending with the Window object.
 
 ### Without scrolling parents
 
